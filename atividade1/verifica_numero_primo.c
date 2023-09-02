@@ -1,31 +1,32 @@
 #include <stdio.h>
+#include<stdlib.h>
 
-int verifica_numero_primo(int n){
-    return 0;
+
+int verificanumero(int num) {
+    if (num <= 1) {
+        return 0;  
+    }
+    
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return 0;  
+        }
+    }
+    
+    return 1; 
 }
 
-int main(int argc, char* argv[]){
+int main() {
+    int num;
 
-    int num, i, resultado;
+    printf("Digite um número: ");
+    scanf("%d", &num);
 
-    printf("teste");
-
-    num = argv[1];
-    
-    printf("\n%s\n", argv[1]);
-
-for (i = 2; i <= num / 2; i++) {
-    if (num % i == 0) {
-       resultado++;
-       break;
+    if (verificanumero(num)) {
+        printf("1 - O número eh primo.\n");
+    } else {
+        printf("0 - O número nao eh primo.\n");
     }
- }
- 
- if (resultado == 0){
-    printf("%d é um número primo\n", num);
- }else{
-    printf("%s não é um número primo\n", num);
- }
- 
- return 0;
+
+    return 0;
 }
