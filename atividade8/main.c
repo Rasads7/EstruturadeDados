@@ -24,8 +24,8 @@ int main(int argc, char* argv[]){
     n0 = NULL;
     lista_imprimir(n0);
 
-    printf("\nCaractere está na lista? %d", lista_verificar_existencia(n0, 'I'));
-    printf("\nNumero de ocorrencias: %d", lista_verificar_ocorrencias(n0,'I'));
+    printf("\nO caractere está presente? %d", lista_verificar_existencia(n0, 'I'));
+    printf("\nNum de vezes: %d", lista_verificar_ocorrencias(n0,'I'));
     lista_imprimir_inversa(n0);
     lista_remover_no_i(n0, 1);
         printf("\n");
